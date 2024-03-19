@@ -1,7 +1,9 @@
-const MainLayout = () => {
+import React from 'react'
+
+export const HomePage = () => {
   return (
-    <div>layout</div>
+    <div>HomePage</div>
   );
 };
 
-export default MainLayout;
+export default HomePage;
