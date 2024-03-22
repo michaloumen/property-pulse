@@ -1,3 +1,4 @@
 - projeto usa tailwind
 - node versão 18.17.0 (acho que é essa)
 - técnica de SEO
+- roteamento com app Router ao invés de pages
