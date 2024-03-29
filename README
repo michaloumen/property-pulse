@@ -1,4 +1,5 @@
 - projeto usa tailwind
 - node versão 18.17.0 (acho que é essa)
-- técnica de SEO
+- técnica de SEO como uso de metadata, link do next
+- Next.js
 - roteamento com app Router ao invés de pages
