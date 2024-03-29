@@ -2,17 +2,18 @@
 import { useRouter } from 'next/navigation'
 
 const PropertyPage = () => {
-  const router = useRouter()
-
+  const router = useRouter();
   return (
     <div>
-      <button
+      PropertyPage
+      {/* <button
         onClick={() => router.push('/')}
         className='bg-blue-500 p-2'
       >
         Go Home
-      </button>
-    </div >
+      </button> */}
+      
+      </div >
   )
 }
 
