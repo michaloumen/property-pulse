@@ -4,3 +4,4 @@
 - Next.js
 - roteamento com app Router ao invés de pages
 - integração com mongodb atlas
+- this application is using a google provider through next auth for authentication 
