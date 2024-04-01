@@ -4,4 +4,7 @@
 - Next.js
 - roteamento com app Router ao invés de pages
 - integração com mongodb atlas
-- this application is using a google provider through next auth for authentication 
+- this application is using a google provider through next auth for authentication
+
+- Comentários kkk 
+- Muito amor pelos meu projetinho porque cada etapa foi feita e testada e é muito legal ver as coisas tomando forma, os dados que antes vinham de um JSON estático, começarem a se comunicar com um banco de dados. Também é legal ver o front crescendo rápido por estar usando tailwind :D
