@@ -148,7 +148,7 @@ const Navbar = () => {
                     <Image
                       className='h-8 w-8 rounded-full'
                       src={profileDefault}
-                      alt=''
+                      alt='Profile Image'
                     />
                   </button>
                 </div>
