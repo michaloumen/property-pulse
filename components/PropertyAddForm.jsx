@@ -140,7 +140,7 @@ const PropertyAddForm = () => {
             id='name'
             name='name'
             className='border rounded w-full py-2 px-3 mb-2'
-            placeholder='eg. Beautiful Apartment In Miami'
+            placeholder='ex. Beautiful Apartment In Miami'
             required
             value={fields.name}
             onChange={handleChange}
