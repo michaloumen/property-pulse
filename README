@@ -12,9 +12,3 @@
 - Comentários kkk 
 - Muito amor pelos meu projetinho porque cada etapa foi feita e testada e é muito legal ver as coisas tomando forma, os dados que antes vinham de um JSON estático, começarem a se comunicar com um banco de dados. Também é legal ver o front crescendo rápido por estar usando tailwind :D
 - Brad Traversy
-
-- TODO 
-- Quando logar, ir pra uma página específica, tipo a HOME
-- Eu consigo acessar rotas que deveriam ser protegidas pela URL?
-- porque o botão de logar aparece e desaparece?
-- porque as vezes o login com google dá erro?

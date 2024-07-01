@@ -15,6 +15,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const [providers, setProviders] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const pathname = usePathname();
 
@@ -22,6 +23,7 @@ const Navbar = () => {
     const setAuthProviders = async () => {
       const res = await getProviders();
       setProviders(res);
+      setLoading(false);
     }
 
     setAuthProviders();
@@ -104,12 +106,12 @@ const Navbar = () => {
           </div>
 
           {/* <!-- Right Side Menu (Logged Out) --> */}
-          {!session && (
+          {!session && !loading && (
             <div className='hidden md:block md:ml-6'>
               <div className='flex items-center'>
                 {providers && Object.values(providers).map((provider, index) => (
                   <button
-                    onClick={() => signIn(provider.id)}
+                    onClick={() => signIn(provider.id, { callbackUrl: '/' })}
                     key={index}
                     className='flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
                   >
