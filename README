@@ -8,6 +8,9 @@
 - After this, save the user to the database and make it so that the user ID gets saved to the session, and than will be able to authenticate
 - protect routes
 - Cloudinary image upload
+- toast para dialogs de sucesso e erro
+- CRUD com as casas
+- Rotas autenticadas (acho que chama assim) pra que só consiga fazer o CRUD com casa que foi o usuário que inseriu
 
 - Comentários kkk 
 - Muito amor pelos meu projetinho porque cada etapa foi feita e testada e é muito legal ver as coisas tomando forma, os dados que antes vinham de um JSON estático, começarem a se comunicar com um banco de dados. Também é legal ver o front crescendo rápido por estar usando tailwind :D
