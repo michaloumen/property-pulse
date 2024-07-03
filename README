@@ -10,7 +10,8 @@
 - Cloudinary image upload
 - toast para dialogs de sucesso e erro
 - CRUD com as casas
-- Rotas autenticadas (acho que chama assim) pra que só consiga fazer o CRUD com casa que foi o usuário que inseriu
+- Rotas autenticadas -- pra que só consiga fazer o CRUD com casa que foi o usuário que inseriu. Ex: o usuário precisa estar logado para adicionar, editar ou excluir uma propriedade
+- Rotas autorizadas -- vão alṕem da autenticação e verifica o nível de acesso ou permissões de um usuário. Ex: o usuário 'a' adicionou uma propriedade, então ele só podera editar ou excluir essa propriedade
 
 - Comentários kkk 
 - Muito amor pelos meu projetinho porque cada etapa foi feita e testada e é muito legal ver as coisas tomando forma, os dados que antes vinham de um JSON estático, começarem a se comunicar com um banco de dados. Também é legal ver o front crescendo rápido por estar usando tailwind :D
