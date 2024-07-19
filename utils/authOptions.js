@@ -14,6 +14,7 @@ export const authOptions = {
           response_type: 'code',
         },
       },
+      checks: ['none']
     }),
   ],
   callbacks: {
