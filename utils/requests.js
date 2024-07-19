@@ -23,14 +23,13 @@ async function fetchProperties() {
 }
 
 // Fetch single property
-async function fetchProperty(id) {
+async function fetchProperty(id, token) {
   try {
-    // Handle the case where the domain is not available yet
-    if (!apiDomain) {
-      return null;
-    }
-
-    const res = await fetch(`${apiDomain}/properties/${id}`);
+    const res = await fetch(`/api/properties/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`,
+      },
+    });
 
     if (!res.ok) {
       throw new Error('Failed to fetch data');
