@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { toast } from 'react-toastify';
 // import { useGlobalContext } from '@/context/GlobalContext';
 
@@ -13,20 +13,24 @@ const Message = ({ message }) => {
     try {
       const res = await fetch(`/api/messages/${message._id}`, {
         method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ read: !isRead })
       });
 
-      if (res.status === 200) {
+      if (res.ok) {
         const { read } = await res.json();
         setIsRead(read);
-        setUnreadCount((prevCount) => (read ? prevCount - 1 : prevCount + 1));
-        if (read) {
-          toast.success('Marked as read');
-        } else {
-          toast.success('Marked as new');
-        }
+        // setUnreadCount((prevCount) => (read ? prevCount - 1 : prevCount + 1)); // Descomente quando usar o contexto
+        toast.success(read ? 'Marked as read' : 'Marked as new');
+      } else {
+        const errorText = await res.text();
+        console.error('Error:', errorText);
+        toast.error('Something went wrong');
       }
     } catch (error) {
-      console.log(error);
+      console.log('Error:', error);
       toast.error('Something went wrong');
     }
   };
@@ -37,13 +41,17 @@ const Message = ({ message }) => {
         method: 'DELETE',
       });
 
-      if (res.status === 200) {
+      if (res.ok) {
         setIsDeleted(true);
-        setUnreadCount((prevCount) => prevCount - 1);
+        // setUnreadCount((prevCount) => prevCount - 1); // Descomente quando usar o contexto
         toast.success('Message Deleted');
+      } else {
+        const errorText = await res.text();
+        console.error('Error:', errorText);
+        toast.error('Message was not deleted');
       }
     } catch (error) {
-      console.log(error);
+      console.log('Error:', error);
       toast.error('Message was not deleted');
     }
   };
@@ -104,4 +112,5 @@ const Message = ({ message }) => {
     </div>
   );
 };
+
 export default Message;
